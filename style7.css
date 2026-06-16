@@ -1,0 +1,97 @@
+* {
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: red; */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    /* background-color: red; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    /* flex-wrap: wrap; */
+}
+
+input {
+    /* background-color: red; */
+    width: 250px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produtos {
+    display: flex;
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0 .3s;
+}
+
+.produtos:hover {
+   
+    transform: scale(1.03);
+}
+
+.produtos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.containerProdutos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+h2 {
+    padding: 10px 10px;
+}
+
+p {
+    padding: 10px 10px;
+}
+
+.card-conteudo {
+    padding: 10px 10px;
+}

@@ -2,178 +2,178 @@ const prompt = require('prompt-sync')()
 
 
 
-//const meuCarro = {
-  //  modelo: 'Toyota',
-  //  cor: 'Prata',
-  //  ano: 2021,
-  //  classe: 'Suv',
- //   flex: 'sim',
-//}
+const meuCarro = {
+   modelo: 'Toyota',
+   cor: 'Prata',
+   ano: 2021,
+   classe: 'Suv',
+   flex: 'sim',
+}
 
-//meuCarro.sinistro = true
+meuCarro.sinistro = true
 
 
-//console.log(meuCarro.flex)
+console.log(meuCarro.flex)
 
-//meuCarro.flex = true
-//console.log(meuCarro.flex)
-//
+meuCarro.flex = true
+console.log(meuCarro.flex)
+
 
 
 //spread operator
-//const novoCarro = {
-//    ...meuCarro,
-///    modelo: 'Esportivo',
-//    preco: 500.000
-//}
+const novoCarro = {
+   ...meuCarro,
+    modelo: 'Esportivo',
+   preco: 500.000
+}
 
-//novoCarro
+novoCarro
 
 
-//console.log(novoCarro)
+console.log(novoCarro)
 
 
 
 //-------------------------------------------------------------
 
 
-////let aluno = {
-  //  nome: 'Creusa',
- //   idade: 85,
- //   apresentar(){
-  //      console.log(`Olá, sou a ${this.nome}`)
-  //  }
-//}
+let aluno = {
+   nome: 'Creusa',
+   idade: 85,
+   apresentar(){
+       console.log(`Olá, sou a ${this.nome}`)
+   }
+}
 
-//aluno.apresentar()
+aluno.apresentar()
 
 
 //-------------------------------------------------------------
 
-//class Aluno {
-    //coonstrutor, o que precisa para essa clesse conseguir existir?
-    //No exemplo, para a classe existir, precisamos do nome e da idade
-  //  constructor(nome, idade){
+class Aluno {
+   // coonstrutor, o que precisa para essa clesse conseguir existir?
+  //  No exemplo, para a classe existir, precisamos do nome e da idade
+   constructor(nome, idade){
 
     
-        //this.nome === aluno.nome
-   //     this.nome = nome
-        //this.idade === aluno.idade, pega o idade que colocar no parametro
-   //     this.idade = idade
- // }
-//}
+      this.nome === aluno.nome
+      this.nome = nome
+      this.idade === aluno.idade, //pega a idade; que colocar no parametro
+      this.idade = idade
+ }
+}
 
 
 
-//class Carro {
-    //constructor(marca, modelo, ano){
-    //    this.marca = marca,
-    //    this.modelo = modelo,
-    //    this.ano = ano 
-    //}
+class Carro {
+    constructor(marca, modelo, ano){
+       this.marca = marca,
+       this.modelo = modelo,
+       this.ano = ano 
+    }
 
 
-  //  apresentar(){
-   //     console.log(`Sou o carro modelo ${this.modelo}`)
-   // } 
+   apresentar(){
+       console.log(`Sou o carro modelo ${this.modelo}`)
+   } 
 
-   // buzina(){
-   //     console.log(`O carro ${this.modelo} apertou o freio`)
-  //  }
+   buzina(){
+       console.log(`O carro ${this.modelo} apertou o freio`)
+   }
 
     
-//}
-        //new === novo, quer dizer que estamos criando uma instância
-//let carro = new Carro("Toyota", "Corola", 2026)
-//let carro2 = new Carro("Mercedes", "g63", 2027)
+}
+//new === novo, quer dizer que estamos criando uma instância
+let carro = new Carro("Toyota", "Corola", 2026)
+let carro2 = new Carro("Mercedes", "g63", 2027)
 
-//console.log(carro)
-//console.log(carro2)
+console.log(carro)
+console.log(carro2)
 
 //------------------------------------------------------------
 
-// class Pessoa {
-//     constructor(nome, idade){
-//         this.nome = nome,
-//         //pessoa.nome = nome
-//         this.idade = idade        
-//     }
+class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome,
+        //pessoa.nome = nome
+        this.idade = idade        
+    }
 
 
-//     apresentar(){
-//     console.log(`Olá, meu nome é ${nome} e tenho ${idade} anos`)
-//     }
-// }    
+    apresentar(){
+    console.log(`Olá, meu nome é ${nome} e tenho ${idade} anos`)
+    }
+}    
 
 
 
-// let Pessoa1 = new Pessoa("Letícia", "18")
+let Pessoa1 = new Pessoa("Letícia", "18")
 
-// console.log(Pessoa1)
+console.log(Pessoa1)
 
-// Pessoa1.apresenrtar()
+Pessoa1.apresenrtar()
 
 //-------------------------------------------------------------
 
-// class Pessoa {
-//     constructor(nome, idade){
-//         this.nome = nome
-//         this.idade = idade 
-//     }
+class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome
+        this.idade = idade 
+    }
 
-//     apresentar(){
-//         console.log(`meu nome é ${nome}`)
-//     }
-// }
+    apresentar(){
+        console.log(`meu nome é ${nome}`)
+    }
+}
 
-// class Aluno extends Pessoa{
-//     constructor(nome, idade, curso){
-//         super(nome, idade)
+class Aluno extends Pessoa{
+    constructor(nome, idade, curso){
+        super(nome, idade)
 
-//         this.curso = curso 
-//     }
+        this.curso = curso 
+    }
 
-//     estudar(){
-//         console.log(`${this.nome} está estudando`)
-//     }
+    estudar(){
+        console.log(`${this.nome} está estudando`)
+    }
 
-// }
+}
 
-// class Professor extends Pessoa{
-//     constructor(nome, idade, disciplina){
-//         super(nome, idade)
+class Professor extends Pessoa{
+    constructor(nome, idade, disciplina){
+        super(nome, idade)
 
-//         this.disciplina = disciplina
-//     }
+        this.disciplina = disciplina
+    }
 
-//     ensinando(){
-//         console.log(`${this.nome} está ensinando`)
-//     }
-// }
+    ensinando(){
+        console.log(`${this.nome} está ensinando`)
+    }
+}
 
-// const profNome = prompt('Digite o nome do professor: ')
-// const profIdade = prompt('Digite a idade do professor: ')
-// const profDisciplina = prompt('Digite a disciplina do professor: ')
-
-
+const profNome = prompt('Digite o nome do professor: ')
+const profIdade = prompt('Digite a idade do professor: ')
+const profDisciplina = prompt('Digite a disciplina do professor: ')
 
 
 
-// const professor1 = new Professor(profNome, profIdade, profDisciplina)
-// console.log(professor1)
-
-// const nAluno = prompt('Digite o nome do Aluno: ')
-// const aIdade = prompt('Digite o Idade do Aluno: ')
-// const aCurso = prompt('Digite a Disciplina do Aluno:')
 
 
+const professor1 = new Professor(profNome, profIdade, profDisciplina)
+console.log(professor1)
 
-// //const professor1 = new Professor('Igor', '65', 'T.I')
-// //console.log(professor1)
+const nAluno = prompt('Digite o nome do Aluno: ')
+const aIdade = prompt('Digite o Idade do Aluno: ')
+const aCurso = prompt('Digite a Disciplina do Aluno:')
 
-// const aluno1 = new Aluno('Fulano', 62, 'T.I') 
 
-// console.log(aluno1)
+
+//const professor1 = new Professor('Igor', '65', 'T.I')
+//console.log(professor1)
+
+const aluno1 = new Aluno('Fulano', 62, 'T.I') 
+
+console.log(aluno1)
 
 //-------------------------------------------------------------
 

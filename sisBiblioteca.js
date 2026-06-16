@@ -1,7 +1,7 @@
-class Livros {
-    constructor(titulo, autor, disponivel) {
-        this.titulo = titulo, 
-        this.autor = autor
+class livros {
+    constructor(titulo, autor, disponivel){
+        this.titulo = titulo,
+        this.autor = autor,
         this.disponivel = disponivel 
     }
 }
@@ -13,23 +13,21 @@ class Biblioteca {
 
     adicionarLivro(livros) {
         this.itens.push(livros)
-    
-
     }
 
     listarLivros() {
-     this.itens.forEach(livros => {
-        const status = livros.disponivel? 
-        "Disponível": "Emprestado"
-        console.log(`${livros.titulo} - ${livros.autor} (${status})`)
-     })
+        this.itens.forEach(livros => {
+            const status = livros.disponivel?
+            "Disponível" : "Emprestado"
+            console.log(`${livros.titulo} - ${livros.autor} (${status})`)
+        })
     }
 
-    emprestarLivro(titulo) { 
+    emprestarLivro(titulo) {
         let livros = this.livros.find(l => l.titulo === titulo)
 
         if (!livros) {
-            console.log("Livro emprestado com sucesso")
+            console.log("Livros emprestado com sucesso")
         }else {
             console.log("Livro indisponível")
         }
@@ -39,13 +37,13 @@ class Biblioteca {
         let livro = this.livros.find(l => l.titulo === titulo)
 
         if (livro) {
-            itens.disponivel = true
-            console.log("Livro devolvido com sucesso")
+            this.itens.disponivel = true
+            consolel.log("Livro devolvido com sucesso")
         }
     }
 
     contarDisponiveis() {
-        let count = 0 
+        let count = 0
 
         this.itens.forEach(livro => {
             if (livro.disponivel) {
@@ -53,11 +51,10 @@ class Biblioteca {
             }
         })
 
-        return count
+        return count 
     }
 }
 
-//Testando o sistema 
 
 
 let livro1 = new Livros("Dom Casmurro", "Machado de Assis")
@@ -70,20 +67,19 @@ biblioteca.adicionarLivro(livro1)
 biblioteca.adicionarLivro(livro2)
 biblioteca.adicionarLivro(livro3)
 
-console.log("Lista de livros:")
+console.log("Lista de livros: ")
 biblioteca.listarLivros()
 
 console.log("\nEmprestando livro...")
 biblioteca.emprestandoItens("1984")
 
-console.log("\nLista atualizada:")
+console.log("\nLista atualizada: ")
 biblioteca.listarLivros()
 
 console.log("\nDevolvendo livro...")
 biblioteca.devolverLivro("1984")
 
-console.log("\nLista final:")
+console.log("\nLista final: ")
 biblioteca.listarLivros()
 
-console.log("\nDisponível:", biblioteca.contarDisponiveis())
-
+console.log("\nDisponível: ", biblioteca.contarDisponiveis())

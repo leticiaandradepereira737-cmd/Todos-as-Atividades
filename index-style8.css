@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container-geral {
+    /* background-color: #9f9f9f; */
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+#container-cabecalho {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+
+#container-cabecalho img{
+    width: 20%;
+    height: 100px;
+    margin-right: 100px;
+}
+
+#titulo {
+    background-color: rgb(105, 151, 250);
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#container-conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-conteudo-esquerdo {
+    width: 65%;
+    height: 70vh;
+    /* background-color: red; */
+}
+
+#container-conteudo-direito {
+    width: 30%;
+    height: 70vh;
+    /* background-color: blueviolet; */
+    /* display: flex; */
+    justify-content: column;
+}
+
+#container-login {
+    width: 100%;
+    height: 50%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#container-login h3 {
+    /* background-color: aqua; */
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container-login form {
+    /* background-color: brown; */
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#container-esquerdo-item-1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+#container-conteudo-esquerdo img {
+    width: 90px;
+    height: 90px;
+}
+
+#container-textos-item-1 {
+    height: 80px;
+}
+
+
